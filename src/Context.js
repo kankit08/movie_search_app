@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 const AppContext = React.createContext();
 
-export const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_URL_API_KEY}&s=titanic`;
+export const API_URL = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=titanic`;
 
 const AppProvider = ({ children }) => {
   // States
