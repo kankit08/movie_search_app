@@ -1,7 +1,13 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 const SingleMovie = () => {
-  return <div>SingleMovie</div>;
+  const { id } = useParams();
+  return (
+    <div>
+      <h2>Movie id is: {id}</h2>
+    </div>
+  );
 };
 
 export default SingleMovie;
