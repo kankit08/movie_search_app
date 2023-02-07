@@ -20,6 +20,10 @@ const AppProvider = ({ children }) => {
 
       if (data.Response === "True") {
         setIsLoading(false);
+        setIsError({
+          show: "false",
+          msg: "",
+        });
         setMovie(data.Search);
       } else {
         setIsError({

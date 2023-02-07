@@ -2,8 +2,17 @@ import React, { useContext } from "react";
 import { AppContext } from "../Context";
 import { NavLink } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
+
 const Movie = () => {
-  const { movie } = useContext(AppContext);
+  const { movie, isLoading } = useContext(AppContext);
+
+  if (isLoading) {
+    return (
+      <div className="movie-section">
+        <div className="loading">Loading...</div>
+      </div>
+    );
+  }
   return (
     <section className="movie-page">
       <div className="container grid grid-4-col">
