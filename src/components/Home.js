@@ -5,7 +5,6 @@ import Search from "./Search";
 const Home = () => {
   return (
     <div>
-      <h1>My Home page</h1>
       <Search />
       <Movie />
     </div>
