@@ -12,6 +12,7 @@ const AppProvider = ({ children }) => {
   const [query, setQuery] = useState("hacker");
 
   const getMovies = async (url) => {
+    setIsLoading(true);
     try {
       const res = await fetch(url);
       const data = await res.json();
@@ -33,7 +34,7 @@ const AppProvider = ({ children }) => {
   useEffect(() => {
     let timeOut = setTimeout(() => {
       getMovies(`${API_URL}&s=${query}`);
-    }, 1000);
+    }, 500);
     return () => clearTimeout(timeOut);
   }, [query]);
   return (

@@ -1,12 +1,65 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useParams, NavLink } from "react-router-dom";
+import { API_URL } from "../Context";
 
 const SingleMovie = () => {
   const { id } = useParams();
+
+  // States
+  const [isLoading, setIsLoading] = useState(true);
+  const [movie, setMovie] = useState("");
+
+  const getMovies = async (url) => {
+    try {
+      const res = await fetch(url);
+      const data = await res.json();
+      console.log(data);
+
+      if (data.Response === "True") {
+        setIsLoading(false);
+        setMovie(data);
+      }
+    } catch (error) {
+      console.log("Not able to fetch the results", error);
+    }
+  };
+  useEffect(() => {
+    let timeOut = setTimeout(() => {
+      getMovies(`${API_URL}&i=${id}`);
+    }, 1000);
+    return () => clearTimeout(timeOut);
+  }, [id]);
+
+  if (isLoading) {
+    return (
+      <div className="movie-section">
+        <div className="loading">Loading...</div>
+      </div>
+    );
+  }
   return (
-    <div>
-      <h2>Movie id is: {id}</h2>
-    </div>
+    <section className="movie-section">
+      <div className="movie-card">
+        <figure>
+          <img src={movie.Poster} alt={movie.Title} />
+        </figure>
+
+        <div className="card-content">
+          <p className="title">{movie.Title}</p>
+          <p className="card-text">Star-Cast: {movie.Actors}</p>
+          <p className="card-text">Director: {movie.Director}</p>
+          <p className="card-text">Relesed on: {movie.Released}</p>
+          <p className="card-text">Genre: {movie.Genre}</p>
+          <p className="card-text">IMDB Ratng: {movie.imdbRating}/10</p>
+          <p className="card-text">Language: {movie.Language}</p>
+          <p className="card-text">Runtime: {movie.Runtime}</p>
+          <p className="card-text">Awards: {movie.Awards}</p>
+          <NavLink to="/" className="back-btn">
+            Go Back
+          </NavLink>
+        </div>
+      </div>
+    </section>
   );
 };
 
