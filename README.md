@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Movie Search Appicaton
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **Description**
 
-## Available Scripts
+A React JS project for a Movie Search Appicaton using hooks(Context API, UseEffect & UseState).<br/> User can search for any movies/series and also can click on any searched result to see the details of it.</br>
 
-In the project directory, you can run:
+For movie data, using omdbAPI(free-access, only 1000 search allowed)
 
-### `npm start`
+## Project Status
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+It is complete for version1.<br/>
+In version2, will bring some new features like:</br>
+In place of Loading (when user click on any output), spinner will be there and few more and also upgrde the UI soon.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project view
 
-### `npm test`
+When user search for "Batman" movie and output is displayed like this:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+![Screenshot from 2023-02-09 11-01-18](https://user-images.githubusercontent.com/69050414/217726559-fb033f5d-db64-4b25-88e1-433437378aaf.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+A video clip of the project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Screencast from 09-02-23 11:07:07 AM IST.webm](https://user-images.githubusercontent.com/69050414/217727926-2cf41b1d-e59f-4867-abca-4c9638a33363.webm)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### **To start with this project:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Downlaod/clone the repo
+   ```bash
+   https://github.com/kankit08/movie_search_app.git
+   ```
+2. Install NPM Packages:
+   ```bash
+   npm install
+   ```
+3. To run this project:
+   ```bash
+   npm start
+   ```
+**Note: To run this project, NodeJS must be installed on your local machine
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+And you are ready to go
